@@ -1,0 +1,135 @@
+.bgOrange{
+    background-color: #f9a122;
+}
+body{
+    background-color: black;
+    padding: 0 2rem;
+    color: white;
+}
+
+/* Navigation */
+
+.navbar{
+    background-color: black;
+    
+}
+nav li a{
+    color: white !important;
+}
+
+nav img{
+    height: 80px;
+}
+nav .rejoindreClub{
+    background-color: chocolate;
+    padding: 0px 3px 0px 3px;
+    border-radius: 2px;
+}
+nav .rejoindreClub:hover{
+    background-color: rgb(114, 58, 18);
+   
+}
+nav .rejoindreClub a{
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* banner */
+.banner{
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+
+.bannerBg{
+    background-color: #f9a122;
+}
+.bannerBg h1{
+    font-weight: bold;
+    font-size: 55px;
+    font-family: -apple-system,'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 550px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    word-spacing: 4px;
+}
+.bannerBg p{
+    font-size: 20px;
+    font-family: -apple-system,'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 550px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+.bannerBg img{
+    height: 350px;
+    border-radius: 15px !important;
+}
+
+
+
+/*  */
+.economie{
+    margin-top: 40px;
+}
+.economie h1{
+    font-weight: normal;
+    font-size: 55px;
+    word-spacing: 4px;
+    margin-bottom: 20px;
+}
+.economie p{
+    font-size: 20px;
+    font-family: -apple-system,'Open Sans', 'Helvetica Neue', sans-serif;
+    word-spacing: 4px;
+    margin-bottom: 80px;
+}
+
+/* Offres */
+.sectionOffre{
+    display: flex;
+    justify-content: space-between;
+}
+.sectionOffre img{
+    margin-right: 10px;
+}
+.contentOffre{
+    margin-bottom: 80px;
+}
+
+
+.boites{
+    color: black;
+}
+.engagement{
+    padding: 40px 0px;
+}
+.engagement h1{
+    margin-bottom: 30px;
+}
+
+.boites .card{
+    margin-bottom: 40px;
+    padding: 5px 5px 5px 150px;
+}
+.boites .card:hover{
+    background: linear-gradient(120deg, rgba(255, 125, 4, 0.911), white);
+}
+
+.logoFoot{
+    text-align: center;
+    margin-top: 25px;
+    
+}
+.footLien{
+    text-align: center;
+    
+}
+.footLien a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.copyright{
+    text-align: center;
+}
