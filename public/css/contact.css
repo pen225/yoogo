@@ -1,0 +1,24 @@
+body{
+    background: #0a57a2;
+}
+
+.contentForm{
+    /* background: white; */
+    width: 800px;
+    text-align: center;
+    padding: 60px 120px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+}
+
+button{
+    font-size: 18px !important;
+    width: 460px;
+}
+
+.textFooter{
+    color: #7da7d0!important;
+}
