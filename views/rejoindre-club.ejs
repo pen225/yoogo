@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/lien/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/css/contact.css">
+    <link rel="stylesheet" href="../public/css/rejoindre.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,34 +13,47 @@
 
     <div class="container">
         <h1>Inscrivez-vous pour devenir membre :</h1>
-        <form action="">
+        <form action="/rejoindre" method="POST">
             <div class="row">
-                <div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Adress email">
-                    </div>
+                <div class="d-flex justify-content-between">
                     <div>
-                        <select name="" id="" class="form-select">
-                            <option value="" selected>Monsieur</option>
-                            <option value="">Madame</option>
-                        </select>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adress email" id="
+                            email" name="email">
+                        </div>
+                        <div>
+                            <select name="civilite" id="civilite" class="form-select">
+                                <option value="mr" selected>Monsieur</option>
+                                <option value="mme">Madame</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nom" name="nom" id="nom">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Prénom" name="prenom" id="prenom">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Prénom">
+    
+                    <div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Code postal" name="codePostal" id="codePostal">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ville" name="ville" id="ville">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" placeholder="" name="anniv">
+                        </div>
                     </div>
                 </div>
-
-                <div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Code postal">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Ville">
-                    </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        J'ai lu la Politique de Protection des données à caractère personnel, et en validant j’accepte de recevoir des offres promotionnelles de la part d'Elixis Digital.
+                    </label>
                 </div>
+                <button type="submit" class="btn btn-success">Je m'inscris</button>
             </div>
         </form>
     </div>
