@@ -11,12 +11,15 @@ app.use('/rejoindre', rejoindre);
 app.use('/contact', contact);
 app.use('/', index);
 
-database.connect(function(error) {
-    if (!!error) {
-        console.log("erreur");
-    }else{
+database.connect((error) =>{
+    if (error) {
+        console.log(error);
+        return ;
+    } else{
         console.log("connecter");
     }
+    
+    
 })
 
 
