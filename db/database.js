@@ -1,9 +1,8 @@
 const mysql = require('mysql');
 let bd = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    port: '8080',
+    host: '192.168.64.2',
+    user: 'test',
+    password: '12345',
     database: 'yoogo'
 });
 

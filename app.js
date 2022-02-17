@@ -21,16 +21,15 @@ app.use('/', index);
 
 db.connect(function(err){
     if (err) {
-        console.log('error');
+        console.log(err);
     }else{
         console.log('success');
-        app.set('views', './views');
-        app.set('view engine', 'ejs');
-        app.use('/public', express.static('public'));
     }
 })
 
-
+app.set('views', './views');
+app.set('view engine', 'ejs');
+app.use('/public', express.static('public'));
 
 
 
