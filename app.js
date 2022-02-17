@@ -11,23 +11,20 @@ app.use('/rejoindre', rejoindre);
 app.use('/contact', contact);
 app.use('/', index);
 
-database.connect((error) =>{
+
+database.connect(function(error) {
     if (error) {
-        console.log(error);
-        return ;
-    } else{
-        console.log("connecter");
+        console.log("error");
+    }else{
+        console.log("success");
+        app.set('views', './views');
+        app.set('view engine', 'ejs');
+        app.use('/public', express.static('public'));
     }
-    
-    
 })
 
 
 
-
-app.set('views', './views');
-app.set('view engine', 'ejs');
-app.use('/public', express.static('public'));
 
 // app.get('/rejoindre-club', (req, res) =>{
 //     res.render('rejoindre-club');
