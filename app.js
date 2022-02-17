@@ -11,13 +11,6 @@ app.use('/rejoindre', rejoindre);
 app.use('/contact', contact);
 app.use('/', index);
 
-// db.connect(function(error) {
-//     if (!error) {
-//         console.log("erreur");
-//     }else{
-//         console.log("connecter");
-//     }
-// })
 
 db.connect(function(err){
     if (err) {
@@ -25,11 +18,12 @@ db.connect(function(err){
     }else{
         console.log('success');
     }
+    app.set('views', './views');
+    app.set('view engine', 'ejs');
+    app.use('/public', express.static('public'));
+    
 })
 
-app.set('views', './views');
-app.set('view engine', 'ejs');
-app.use('/public', express.static('public'));
 
 
 

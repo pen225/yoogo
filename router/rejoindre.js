@@ -2,9 +2,8 @@
 const express = require('express');
 let router = express.Router();
 const bodyParser = require('body-parser');
-
-const database = require('../db/database');
-
+const db = require('../db/database');
+let jsonParser = bodyParser.json();
 let urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router
@@ -14,16 +13,21 @@ router
 })
 
 .post(urlencodedParser,(req, res) =>{
+    let{email, civilite, nom, prenom, codePostal, ville, anniversaire} = req.body;
     console.log(req.body);
+   
+    let sql = "INSERT INTO `user`(`email`, `civilite`, `nom`, `prenom`, `codePostal`, `ville`, `anniversaire`) VALUES (?,?,?,?,?,?,?)";
     // res.redirect('/')
     // res.sendStatus(201);
-})
-.post((req, res) =>{
-    const {email, nom} = req.body;
-    database.query()
-    if (email && nom) {
-       
-    }
-})
+    db.query(sql,[email,civilite,nom,prenom,codePostal,ville,anniversaire],(err, res) =>{
+        if (err) {
+            console.log(err);
+        }else{
+            console.log("success");
+        }
+    })
+});
+
+
 
 module.exports = router;
