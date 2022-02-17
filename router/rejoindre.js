@@ -3,7 +3,7 @@ const express = require('express');
 let router = express.Router();
 const bodyParser = require('body-parser');
 
-const database = require('../database');
+const database = require('../db/database');
 
 let urlencodedParser = bodyParser.urlencoded({ extended: false })
 
