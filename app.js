@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 
 const index = require('./router/index')
@@ -11,7 +11,13 @@ app.use('/rejoindre', rejoindre);
 app.use('/contact', contact);
 app.use('/', index);
 
-database.connect()
+database.connect(function(error) {
+    if (!!error) {
+        console.log("erreur");
+    }else{
+        console.log("connecter");
+    }
+})
 
 
 

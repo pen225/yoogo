@@ -13,11 +13,11 @@ router
     res.render('../views/rejoindre-club');
 })
 
-// .post(urlencodedParser,(req, res) =>{
-//     console.log(req.body);
-//     // res.redirect('/')
-//     // res.sendStatus(201);
-// })
+.post(urlencodedParser,(req, res) =>{
+    console.log(req.body);
+    // res.redirect('/')
+    // res.sendStatus(201);
+})
 .post((req, res) =>{
     const {email, nom} = req.body;
     database.query()
