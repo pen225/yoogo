@@ -6,25 +6,34 @@ const PORT = 5000;
 const index = require('./router/index')
 const contact = require('./router/contact')
 const rejoindre = require('./router/rejoindre');
-const database = require('./database');
+const db = require('./db/database');
 app.use('/rejoindre', rejoindre);
 app.use('/contact', contact);
 app.use('/', index);
 
-database.connect(function(error) {
-    if (!!error) {
-        console.log("erreur");
+// db.connect(function(error) {
+//     if (!error) {
+//         console.log("erreur");
+//     }else{
+//         console.log("connecter");
+//     }
+// })
+
+db.connect(function(err){
+    if (err) {
+        console.log('error');
     }else{
-        console.log("connecter");
+        console.log('success');
+        app.set('views', './views');
+        app.set('view engine', 'ejs');
+        app.use('/public', express.static('public'));
     }
 })
 
 
 
 
-app.set('views', './views');
-app.set('view engine', 'ejs');
-app.use('/public', express.static('public'));
+
 
 // app.get('/rejoindre-club', (req, res) =>{
 //     res.render('rejoindre-club');

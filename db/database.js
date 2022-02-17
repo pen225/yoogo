@@ -1,7 +1,10 @@
 const mysql = require('mysql');
-module.exports = mysql.createConnection({
-    host: 'localost',
+let bd = mysql.createConnection({
+    host: 'localhost',
     user: 'root',
     password: '',
     database: 'yoogo'
 });
+
+
+module.exports = bd;
