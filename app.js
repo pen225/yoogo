@@ -6,21 +6,24 @@ const PORT = 5000;
 const index = require('./router/index')
 const contact = require('./router/contact')
 const rejoindre = require('./router/rejoindre');
+const connexionForm = require('./router/connexionForm');
 const db = require('./db/database');
-app.use('/rejoindre', rejoindre);
-app.use('/contact', contact);
-app.use('/', index);
+
 
 
 db.connect(function(err){
-    if (err) {
-        console.log(err);
+    if (err) {;
+        console.log(err)
     }else{
-        console.log('success');
+        app.use('/rejoindre', rejoindre);
+        app.use('/contact', contact);
+        app.use('/connexionForm', connexionForm);
+        app.use('/', index);
+        app.set('views', './views');
+        app.set('view engine', 'ejs');
+        app.use('/public', express.static('public'));
     }
-    app.set('views', './views');
-    app.set('view engine', 'ejs');
-    app.use('/public', express.static('public'));
+ 
     
 })
 

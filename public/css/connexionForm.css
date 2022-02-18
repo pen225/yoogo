@@ -1,0 +1,23 @@
+.contentForm{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.514);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+}
+
+.contentForm input{
+    margin-bottom: 10px;
+    height: 25px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+.contentForm label{
+    font-size: 20px;
+    margin-right: 10px;
+}
