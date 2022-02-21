@@ -12,7 +12,7 @@ const db = require('./db/database');
 
 
 db.connect(function(err){
-    if (err) {;
+    if (err) {
         console.log(err)
     }else{
         app.use('/rejoindre', rejoindre);
@@ -23,8 +23,6 @@ db.connect(function(err){
         app.set('view engine', 'ejs');
         app.use('/public', express.static('public'));
     }
- 
-    
 })
 
 
