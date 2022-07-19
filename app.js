@@ -1,13 +1,10 @@
 const express = require('express');
 const app = express();
-
-
 const index = require('./router/index')
 const contact = require('./router/contact')
 const rejoindre = require('./router/rejoindre');
 const connexionForm = require('./router/connexionForm');
-// const db = require('./db/database');
-
+require('dotenv').config()
 
 
 // db.connect(function(err){
@@ -32,19 +29,4 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
-
-
-
-// app.get('/rejoindre-club', (req, res) =>{
-//     res.render('rejoindre-club');
-// })
-
-// app.get('/contact', (req, res) =>{
-//     res.render('contact');
-// })
-
-// app.get('/', (req, res) =>{
-//     res.render('index');
-// })
-
-app.listen(5000)
+app.listen(process.env.PORT)
