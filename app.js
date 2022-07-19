@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-const PORT = 5000;
 
 
 const index = require('./router/index')
 const contact = require('./router/contact')
 const rejoindre = require('./router/rejoindre');
 const connexionForm = require('./router/connexionForm');
-const db = require('./db/database');
+// const db = require('./db/database');
 
 
 
