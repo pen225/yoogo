@@ -48,6 +48,4 @@ app.use('/public', express.static('public'));
 //     res.render('index');
 // })
 
-app.listen(PORT, ()=>{
-    console.log(`Listen on port ${PORT}`);
-})
+app.listen(5000)
